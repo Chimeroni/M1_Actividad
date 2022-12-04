@@ -91,9 +91,7 @@ tiempo_max = int(input("\n\n\nIntroduce el tiempo máximo de ejecución (segundo
 
 model = robot_model(cant, N, M, suciedad, tiempo_max)
 while (model.celdas_suc > 0 and ((time.time() - model.init_time) < model.final_time)):
-    model.step()
-    # [print(*line) for line in model.dirty_matrix]
-    
+    model.step()    
     for line in model.dirty_matrix:
         str = ""
         for l in line:
